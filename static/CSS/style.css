@@ -1,0 +1,105 @@
+/* Add this CSS in a <style> tag or an external CSS file */
+
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-image: url('https://wallpaperaccess.com/full/3662969.jpg');
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(185, 233, 252);
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.4);
+    /* Adjust the transparency */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    /* Add flex container */
+    flex-direction: column;
+    /* Stack children vertically */
+    align-items: center;
+    /* Center children horizontally */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    /* Center text */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: #ff0000;
+    margin-top: 10px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+/* background for different weather conditions */
+
+.weather-clear {
+    background-image: url('https://wallpaperaccess.com/full/490360.jpg');
+    background-size: cover;
+}
+
+.weather-clouds {
+    background-image: url('https://wallpapercave.com/wp/wp5865040.jpg');
+    background-size: cover;
+}
+
+.weather-rain {
+    background-image: url('https://images.hdqwalls.com/wallpapers/rain-anime-girl-bustand-4k-t6.jpg');
+    background-size: cover;
+}
+
+
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        padding: 8px 16px;
+    }
+}

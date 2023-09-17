@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@500&family=DynaPuff&family=Josefin+Sans&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+</head>
+<body class="weather-clear">
+    <h1>Weather Information</h1>
+
+    <form method="post">
+        <!-- Inside your HTML body -->
+<span id="current-date"></span>
+
+        {% csrf_token %}
+        <label for="location">Enter City Name or Pincode:</label>
+        <input type="text" id="location" name="location" required>
+        <button type="submit">Get Weather</button>
+
+        <input type="hidden" id="weather-condition" value="{{ weather_condition }}">    
+    {% if error_message %}
+    <p class="error">{{ error_message }}</p>
+    {% else %}
+    <h2>City: {{ city }}</h2>
+    <p>Condition: {{weather_condition}}</p>
+    <p>Temperature: {{ temperature }}°C</p>
+    <p>Description: {{ description }}</p>
+    <p>Current Date: {{ current_date }}</p>
+    {% endif %}
+
+
+    
+<script src="{% static 'JS/script.js' %}"></script>
+</body>
+</html>
