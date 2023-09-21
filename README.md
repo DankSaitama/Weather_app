@@ -1,5 +1,3 @@
-Certainly, I can help you get started with documenting your weather app in its development phase. Documentation is crucial for maintaining and sharing your project with others. Here's a basic template for documenting a Django weather app. You can expand on these sections and add more details as needed:
-
 # Weather App Documentation
 
 ## Table of Contents
